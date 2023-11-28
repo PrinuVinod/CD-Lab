@@ -9,27 +9,26 @@ void add_state(char a[3],int i){
 
 void display(int n){
 	int k=0;
-	printf("Epsilon closure of %s = { ",copy);
-	while(k < n)
-    {
+	printf("\n\n\n Epsilon closure of %s = { ",copy);
+	while(k < n){
 		printf(" %s",result[k]);
 		k++;
 	}
-	printf(" }\n");
+	printf(" } \n\n\n");
 }
 
 int main(){
     FILE *INPUT;
-    INPUT=fopen("input.dat","r");
+    INPUT=fopen("input.txt","r");
     char state[3];
     int end,i=0,n,k=0;
     char state1[3],input[3],state2[3];
-    printf("Enter the no of states: \n");
+    printf("\n Enter the no of states: ");
     scanf("%d",&n);
-    printf("Enter the states \n");
+    printf("\n Enter the states: \n");
     for(k=0;k<3;k++){
+        printf("%d: ", k+1);
 		scanf("%s",states[k]);
-		
 	}
 	
 	for( k=0;k<n;k++){
@@ -42,9 +41,11 @@ int main(){
 			if (end == EOF ){
 				break;
 			}
-				
+            printf("\n1: %s, 2: %s, 3: %s", state1, input, state2);
+
 			if( strcmp(state,state1) == 0 ){
 				if( strcmp(input,"e") == 0 ) {
+                    printf("\n %s is e of %s", state2, state);
 					add_state(state2,i++);
 					strcpy(state, state2);
 				}
