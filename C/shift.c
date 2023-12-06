@@ -79,4 +79,3 @@ void replaceandprint(){
 	printf("\n$%s\t%s$\t%s",stk,a,ac);
 	i=i-2; 
 }
-

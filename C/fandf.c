@@ -20,7 +20,7 @@ int main()
     do
     {
         m = 0;
-        printf("\n\nEnter the elements whose first is to be found:");
+        printf("\n\nEnter the elements whose first is to be found: ");
         scanf("%c", &c);
         first(c);
         printf("First(%c)={", c);

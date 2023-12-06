@@ -41,20 +41,19 @@ int main(){
 			if (end == EOF ){
 				break;
 			}
-            printf("\n1: %s, 2: %s, 3: %s", state1, input, state2);
+            // printf("\n1: %s, 2: %s, 3: %s", state1, input, state2);
 
 			if( strcmp(state,state1) == 0 ){
 				if( strcmp(input,"e") == 0 ) {
-                    printf("\n %s is e of %s", state2, state);
+                    // printf("\n %s is e of %s", state2, state);
 					add_state(state2,i++);
 					strcpy(state, state2);
 				}
 			}
-
 		}
 		display(i);
 		rewind(INPUT);
 	}
-  
+
     return 0;
 }
