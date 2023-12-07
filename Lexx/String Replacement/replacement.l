@@ -9,7 +9,7 @@ int pc=0, sc=0;
 %%
 
 int main() {
-    yyin = fopen("epsilon.c", "r");
+    yyin = fopen("input.txt", "r");
     yyout = fopen("output.txt", "w");
     yylex();
     printf("\nNo. of printf: %d\nNo. of scanf: %d\n", pc, sc);

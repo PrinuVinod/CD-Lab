@@ -5,22 +5,7 @@ identifier [a-zA-Z][a-zA-Z0-9]*
 
 %%
 #.* {printf("\n%s is a preprocessor directive",yytext);}
-int |
-float |
-char |
-double |
-while |
-for |
-struct |
-typedef |
-do |
-if |
-break |
-continue |
-void |
-switch |
-return |
-else |
+int | float | char | double | while | for | struct | typedef | do | if | break | continue | void | switch | return | else |
 goto {printf("\n\t%s is a keyword",yytext);}
 
 "/*" {COMMENT=1;}{printf("\n\t %s is a COMMENT",yytext);}
