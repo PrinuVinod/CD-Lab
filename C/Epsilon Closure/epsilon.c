@@ -3,14 +3,17 @@
 
 char result[20][20],copy[3],states[20][20];
 
-void add_state(char a[3],int i){
+void add_state(char a[3],int i)
+{
 	strcpy(result[i],a);
 }
 
-void display(int n){
+void display(int n)
+{
 	int k=0;
 	printf("\n\n\n Epsilon closure of %s = { ",copy);
-	while(k < n){
+	while(k < n)
+	{
 		printf(" %s",result[k]);
 		k++;
 	}
@@ -26,9 +29,10 @@ int main(){
     printf("\n Enter the no of states: ");
     scanf("%d",&n);
     printf("\n Enter the states: \n");
-    for(k=0;k<3;k++){
+    for(k=0;k<3;k++)
+	{
         printf("%d: ", k+1);
-		scanf("%s",states[k]);
+		scanf("%s", states[k]);
 	}
 	
 	for( k=0;k<n;k++){
@@ -36,15 +40,17 @@ int main(){
 		strcpy(state,states[k]);
 		strcpy(copy,state);
 		add_state(state,i++);
-		while(1){
+		while(1)
+		{
 			end = fscanf(INPUT,"%s%s%s",state1,input,state2);
-			if (end == EOF ){
+			if (end == EOF )
+			{
 				break;
 			}
-            // printf("\n1: %s, 2: %s, 3: %s", state1, input, state2);
-
-			if( strcmp(state,state1) == 0 ){
-				if( strcmp(input,"e") == 0 ) {
+			if( strcmp(state,state1) == 0 )
+			{
+				if( strcmp(input,"e") == 0 )
+				{
                     // printf("\n %s is e of %s", state2, state);
 					add_state(state2,i++);
 					strcpy(state, state2);
@@ -54,6 +60,5 @@ int main(){
 		display(i);
 		rewind(INPUT);
 	}
-
     return 0;
 }
