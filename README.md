@@ -1,5 +1,5 @@
-# CD-Lab
-This are the codes for Compiler Design Lab
+# Compiler Design
+These are soem Compiler Design Code
 
 # How to Run
 In Linux Terminal: <br>
