@@ -1,8 +1,9 @@
 # Compiler Design
-These are soem Compiler Design Code
+These are some Compiler Design Code <br>
 
 # How to Run
 In Linux Terminal: <br>
+
 ## 1. Lex Programs
 ```
 lex filename.l
