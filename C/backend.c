@@ -46,7 +46,7 @@ int main() // The main function where the program starts
 
         // Print the target code to the console
         printf("\n\tMov %c,R%d", str[2], i);
-        printf("\n\t%s%c,R%d", opr, str[4], i);
+        printf("\n\t%s %c,R%d", opr, str[4], i);
         printf("\n\tMov R%d,%c", i, str[0]);
     } while (strcmp(icode[++i], "exit") != 0); // Continue looping until "exit" is encountered
 
