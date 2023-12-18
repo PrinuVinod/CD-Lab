@@ -5,10 +5,26 @@ identifier [a-zA-Z][a-zA-Z0-9]*
 
 %%
 #.* {printf("\n%s is a preprocessor directive",yytext);}
-int | float | char | double | while | for | struct | typedef | do | if | break | continue | void | switch | return | else |
+int |
+float |
+char |
+double |
+while |
+for |
+struct |
+typedef |
+do |
+if |
+break |
+continue |
+void |
+switch |
+return |
+else |
 goto {printf("\n\t%s is a keyword",yytext);}
 
 "/*" {COMMENT=1;}{printf("\n\t %s is a COMMENT",yytext);}
+"*/" {COMMENT=0;}{printf("End of comment\n");}
 
 {identifier}\( {if(!COMMENT)printf("\nFUNCTION \n\t%s",yytext);}
 
@@ -34,7 +50,7 @@ goto {printf("\n\t%s is a keyword",yytext);}
 int main(int argc, char **argv)
 {
     FILE *file;
-    file=fopen("input.txt","r");
+    file=fopen("../C/fandf.c","r");
     if(!file)
     {
         printf("could not open the file");

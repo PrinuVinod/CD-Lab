@@ -15,10 +15,10 @@
 int main(){
     printf("Enter a sentence: ");
     yylex();
-    printf("No. of words: %d",words);
+    printf("No. of words: %d",words++);
     printf("\nNo. of character: %d",count);
-    printf("\nNo. of lines: %d",line);
-    printf("\nNo. of space: %d",space);
+    printf("\nNo. of lines: %d",line++);
+    printf("\nNo. of space: %d",space++);
     return 0;
 }
 
